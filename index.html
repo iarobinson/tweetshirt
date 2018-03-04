@@ -15,8 +15,28 @@
     <p>Please upgrade your browser to use TweetShirt!</p>
   </canvas>
   <form>
-    
+    <p>
+      <label for="backgroundColor">Select background color:</lable>
+      <select id="backgroundColor">
+        <option value="white" selected="selected">White</option>
+        <option value="black">Black</option>
+      </select>
+    </p>
+    <p>
+      <label for="shape">Circles or squares?</label>
+      <select id="shape">
+        <option value="none" selected="selected">Neither</option>
+        <option value="circles">Circles</option>
+        <option value="squares">Squares</option>
+      </select>
+    </p>
+    <p>
+      <label for="tweets">Pick a tweet:</label>
+      <!-- Tweets will go below later filled in using JS -->
+      <select id="tweets">
+      </select>
+    </p>
+  <!-- Nothing will happen on this form from this code, the button will likely manage it. -->
   </form>
 </body>
-
 </html>
