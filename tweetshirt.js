@@ -29,6 +29,18 @@ function drawSquare(canvas, context) {
   var x = Math.floor(Math.random() * canvas.width);
   var y = Math.floor(Math.random() * canvas.height);
   
+  // /// THIS CODE DRAWS A TRIANGLE ON THE CANVAS ///
+  // context.beginPath();
+  // context.moveTo(100, 150);
+  // context.lineTo(250, 75);
+  // context.lineTo(125, 30);
+  // context.closePath();
+  // context.lineWidth = 5;
+  // context.stroke();
+  // context.fillStyle = "red";
+  // context.fill();
+  // /// END TRIANGLE CODE ///
+  
   var colors = ["red", "blue", "green", "yellow"];
   
   context.fillStyle = colors[Math.floor(Math.random() * colors.length)];
