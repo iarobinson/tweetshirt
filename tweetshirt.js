@@ -29,7 +29,8 @@ function drawSquare(canvas, context) {
   var x = Math.floor(Math.random() * canvas.width);
   var y = Math.floor(Math.random() * canvas.height);
   
-  // /// THIS CODE DRAWS A TRIANGLE ON THE CANVAS ///
+  // /// TRIANGLE DRAWING ///
+  //  // This is how to write a triangle, filled with red
   // context.beginPath();
   // context.moveTo(100, 150);
   // context.lineTo(250, 75);
@@ -41,6 +42,17 @@ function drawSquare(canvas, context) {
   // context.fill();
   // /// END TRIANGLE CODE ///
   
+  // /// CIRCLE DRAWING ///
+  //  // This is how to write a portion of a circle, filled with red
+  // context.beginPath();
+  // context.arc(100, 100, 75, degreesToRadians(270), 0, false);
+  // context.closePath()
+  // context.fillStyle = 'red';
+  // context.fill();
+  // function degreesToRadians(degrees) {
+  //   return (degrees * Math.PI)/180;
+  // }
+  // // END CIRCLE PRACTICE ///
   var colors = ["red", "blue", "green", "yellow"];
   
   context.fillStyle = colors[Math.floor(Math.random() * colors.length)];
