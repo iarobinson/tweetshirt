@@ -29,7 +29,9 @@ function drawSquare(canvas, context) {
   var x = Math.floor(Math.random() * canvas.width);
   var y = Math.floor(Math.random() * canvas.height);
   
-  context.fillStyle = 'lightblue';
+  var colors = ["red", "blue", "green", "yellow"];
+  
+  context.fillStyle = colors[Math.floor(Math.random() * colors.length)];
   context.fillRect(x, y, w, w);
 }
 
