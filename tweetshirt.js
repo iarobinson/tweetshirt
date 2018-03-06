@@ -86,3 +86,4 @@ function fillBackgroundColor(canvas, context) {
 function degreesToRadians(degrees) {
   return (degrees * Math.PI)/180;
 }
+
