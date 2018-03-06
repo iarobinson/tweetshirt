@@ -6,10 +6,13 @@ window.onload = function() {
 }
 
 function previewHandler() {
+  
+  // Manage Background Color Fill
   var canvas = document.getElementById("tshirtCanvas");
   var context = canvas.getContext("2d");
   fillBackgroundColor(canvas, context);
   
+  // Manage Shape Selection of Squares or Circles
   var selectObj = document.getElementById("shape");
   var index = selectObj.selectedIndex;
   var shape = selectObj[index].value;
@@ -24,6 +27,23 @@ function previewHandler() {
       drawCircle(canvas, context);
     }
   }
+  
+  // Manage Sheep Image Add
+  var sheepObj = document.getElementById("sheep");
+  var sheepIndex = sheepObj.selectedIndex;
+  var sheepSelect = sheepObj[sheepIndex].value;
+  
+  if (sheepSelect == "sheep") {
+    addSheep(canvas, context);
+  }
+}
+
+function fillBackgroundColor(canvas, context) {
+  var selectObj = document.getElementById('backgroundColor');
+  var index = selectObj.selectedIndex;
+  var bgColor = selectObj.options[index].value;
+  context.fillStyle = bgColor;
+  context.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function drawSquare(canvas, context) {
@@ -74,16 +94,18 @@ function drawCircle(canvas, context) {
   context.fill();
 }
 
-function fillBackgroundColor(canvas, context) {
-  var selectObj = document.getElementById('backgroundColor');
-  var index = selectObj.selectedIndex;
-  var bgColor = selectObj.options[index].value;
-  context.fillStyle = bgColor;
-  context.fillRect(0, 0, canvas.width, canvas.height);
-}
-
 // Use this function to support with drawing circles in drawX() functions
 function degreesToRadians(degrees) {
   return (degrees * Math.PI)/180;
+}
+
+// Adding an image to the canvas
+function addSheep(canvas, context) {
+  // Create variable to hold image
+  var image = new Image();
+  // Link image in folder to variable
+  image.src = "sheepicon.png";
+  // Provide instructions on how to display image
+  context.drawImage(image, 100, 100, 70, 70);
 }
 
