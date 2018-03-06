@@ -6,7 +6,6 @@ window.onload = function() {
 }
 
 function previewHandler() {
-  
   // Manage Background Color Fill
   var canvas = document.getElementById("tshirtCanvas");
   var context = canvas.getContext("2d");
@@ -102,10 +101,10 @@ function degreesToRadians(degrees) {
 // Adding an image to the canvas
 function addSheep(canvas, context) {
   // Create variable to hold image
-  var image = new Image();
+  var sheepImage = new Image();
   // Link image in folder to variable
-  image.src = "sheepicon.png";
+  sheepImage.src = "sheepicon.png";
   // Provide instructions on how to display image
-  context.drawImage(image, 100, 100, 70, 70);
+  context.drawImage(sheepImage, Math.floor(Math.random() * canvas.width), Math.floor(Math.random() * canvas.height), 70, 70);
 }
 
